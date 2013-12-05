@@ -48,4 +48,5 @@ public class CSVPayTableProviderTest {
 		assertEquals(table.getPays(1), 3);
 	}
 
+	
 }
