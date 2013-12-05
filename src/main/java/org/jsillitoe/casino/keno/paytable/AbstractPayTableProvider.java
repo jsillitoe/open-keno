@@ -8,6 +8,10 @@ public abstract class AbstractPayTableProvider implements PayTableProvider {
 	protected Map<Integer, PayTable> paytables = new HashMap<Integer, PayTable>();
 	
 
+	public int getMaxSupportedMarks() {
+		return paytables.size();
+	}
+	
 	public PayTable getPayTable(int marks) throws PayTableException{
 		if (paytables.containsKey(marks)){
 			return paytables.get(marks);

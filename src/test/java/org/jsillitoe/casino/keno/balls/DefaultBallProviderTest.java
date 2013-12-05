@@ -1,6 +1,8 @@
 package org.jsillitoe.casino.keno.balls;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+
+import java.util.Random;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -28,7 +30,8 @@ public class DefaultBallProviderTest {
 
 	@Test
 	public void test_provider_returns_20_balls() {
-		fail("Not yet implemented");
+		DefaultBallProvider provider = new DefaultBallProvider(new Random());
+		assertEquals(20,provider.getBalls().getBallList().size());
 	}
 
 }

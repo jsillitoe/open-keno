@@ -31,21 +31,28 @@ public class DefaultPayTableProviderTest {
 	@Test
 	public void test_provider_loads_entire_paytable() throws IOException {
 		PayTableProvider provider = new DefaultPayTableProvider();
-		assertEquals(provider.getPayTableMap().size(),20);
+		assertEquals(10,provider.getPayTableMap().size());
+	}
+	
+	@Test
+	public void test_provider_reports_max_supported_marks_10() throws IOException {
+		PayTableProvider provider = new DefaultPayTableProvider();
+		assertEquals(10,provider.getMaxSupportedMarks());
 	}
 	
 	@Test
 	public void test_provider_loads_one_mark_paytable() throws IOException, PayTableException {
 		PayTableProvider provider = new DefaultPayTableProvider();
 		PayTable table = provider.getPayTable(1);
-		assertEquals(table.getPaysMap().size(),2);
+		assertEquals(2,table.getPaysMap().size());
 	}
 	
 	@Test
 	public void test_provider_loads_one_mark_payout() throws IOException, PayTableException {
 		PayTableProvider provider = new DefaultPayTableProvider();
 		PayTable table = provider.getPayTable(1);
-		assertEquals(table.getPays(1), 3);
+		assertEquals(3,table.getPays(1));
 	}
+
 
 }
