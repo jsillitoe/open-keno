@@ -25,7 +25,7 @@ public class StandardKeno extends Keno {
 	public RaceResult playTicket(Ticket ticket) throws KenoException {
 		try{
 			Balls balls = this.ballProvider.getBalls();
-			PayTable paytable = this.payTableProvider.getPayTable(balls.getCaughtCount(ticket));
+			PayTable paytable = this.payTableProvider.getPayTable(ticket.countMarks());
 			return new StandardRaceResult(balls, ticket, paytable);
 		}catch(BallProviderException bpe){
 			throw new KenoException(bpe);
@@ -40,7 +40,7 @@ public class StandardKeno extends Keno {
 			List<RaceResult> results = new ArrayList<RaceResult>();
 			Balls balls = this.ballProvider.getBalls();
 			for(Ticket ticket : tickets){
-				PayTable paytable = this.payTableProvider.getPayTable(balls.getCaughtCount(ticket));
+				PayTable paytable = this.payTableProvider.getPayTable(ticket.countMarks());
 				results.add(new StandardRaceResult(balls, ticket, paytable));
 			}
 			return results;
