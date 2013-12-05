@@ -1,6 +1,5 @@
 package org.jsillitoe.casino.keno.paytable;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -10,9 +9,8 @@ import java.util.Map;
 
 import au.com.bytecode.opencsv.CSVReader;
 
-public class CSVPayTableProvider implements PayTableProvider {
+public class CSVPayTableProvider extends AbstractPayTableProvider{
 
-	Map<Integer, PayTable> paytables = new HashMap<Integer, PayTable>();
 	
 	public CSVPayTableProvider() throws IOException{
 		InputStream csvstream = CSVPayTableProvider.class.getResourceAsStream("paytable.csv");
@@ -29,20 +27,6 @@ public class CSVPayTableProvider implements PayTableProvider {
 		}
 	}
 
-	
-	public PayTable getPayTable(int marks) throws PayTableException{
-		if (paytables.containsKey(marks)){
-			return paytables.get(marks);
-		}else{
-			throw new PayTableException("Mark value not found in paytables.");
-		}
-	}
-
-	public Map<Integer, PayTable> getPayTableMap() {
-		return new HashMap<Integer, PayTable>(paytables);
-	}
-
-	
 	
 	
 }
