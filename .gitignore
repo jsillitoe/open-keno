@@ -7,20 +7,9 @@
 
 .project
 .classpath
-
-
-*.pydevproject
-.metadata
-.gradle
-bin/
-tmp/
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
 .settings/
-.loadpath
+
+local.properties
 
 # External tool builders
 .externalToolBuilders/
