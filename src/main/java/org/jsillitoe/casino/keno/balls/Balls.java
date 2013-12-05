@@ -1,7 +1,9 @@
 package org.jsillitoe.casino.keno.balls;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.jsillitoe.casino.keno.ticket.Ticket;
 
@@ -18,13 +20,15 @@ public class Balls {
 	}
 	
 	public final int getCaughtCount (Ticket ticket){
-		//TODO Compare to count matches.
-		return 0;
+		Set<Integer> marks = new HashSet<Integer>(ticket.getMarks());
+		marks.retainAll(balls);
+		return marks.size();
 	}
 	
 	public final List<Integer> getCaughtList(Ticket ticket){
-		//TODO Compare to get matches.
-		return new ArrayList<Integer>();
+		List<Integer> marks = new ArrayList<Integer>(ticket.getMarks());
+		marks.retainAll(balls);
+		return marks;
 	}
 	
 	

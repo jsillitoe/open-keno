@@ -67,9 +67,10 @@ public class StandardKenoTest {
 	@Test
 	public void test_single_ticket_mark_1_hit_1() throws KenoException, TicketException, PayTableException {
 		Ticket ticket = new DefaultTicket();
-		ticket.markNumber(25);
+		ticket.markNumber(10);
 		RaceResult result = keno.playTicket(ticket);
-		assertEquals(3,result.getPayout());
 		assertEquals(1,result.getBalls().getCaughtCount(result.getTicket()));
+		assertEquals(3,result.getPayout());
+		
 	}
 }
