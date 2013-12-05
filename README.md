@@ -33,6 +33,20 @@ The rules in Super Keno the same as standard keno, except if the player catches 
 
 Top-bottom keno pays according to how many balls fall into a half (top or bottom) chosen by the player.
 
+
+Usage
+-----
+
+### Basic Usage
+
+For the standard keno game, instantiate the StandardKeno class and any tickets to play:
+
+    Keno keno = new StandardKeno();
+    Ticket ticket = new DefaultTicket();
+    ticket.markNumber(25);
+    RaceResult result = keno.playTicket(ticket);
+
+
 Current Status
 --------------
 - *Standard Keno* - Complete
