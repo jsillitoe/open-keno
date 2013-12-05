@@ -5,8 +5,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import org.jsillitoe.casino.keno.ticket.exception.TicketException;
-
 
 public abstract class AbstractTicket implements Ticket {
 

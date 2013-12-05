@@ -2,8 +2,6 @@ package org.jsillitoe.casino.keno.ticket;
 
 import java.util.Set;
 
-import org.jsillitoe.casino.keno.ticket.exception.TicketException;
-
 public interface Ticket{
 
 	public void addTicketListener(TicketListener listener);
