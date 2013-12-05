@@ -1,18 +1,22 @@
 package org.jsillitoe.casino.keno.ticket;
 
-import java.util.List;
 import java.util.Set;
 
 import org.jsillitoe.casino.keno.ticket.exception.TicketException;
 
 public interface Ticket{
 
+	public void addTicketListener(TicketListener listener);
+	
+	public void removeTicketListener(TicketListener listener);	
+	
+	public void clearTicketListeners();
+	
 	/**
 	 * Count the number of marks on this ticket.
 	 * @return the number of marks added to the ticket.
 	 */
 	public int countMarks();
-	
 	
 	/**
 	 * Get the set of numbers marked.
