@@ -4,4 +4,22 @@
   <artifactId>open-keno</artifactId>
   <version>1.0.0</version>
   <name>open-keno</name>
+  
+  <dependencies>
+    
+    <dependency>
+      <groupId>net.sf.opencsv</groupId>
+      <artifactId>opencsv</artifactId>
+      <version>2.3</version>
+    </dependency>
+            
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+            
+    
+  </dependencies>
 </project>

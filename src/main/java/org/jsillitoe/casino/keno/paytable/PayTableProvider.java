@@ -4,7 +4,7 @@ import java.util.Map;
 
 public interface PayTableProvider {
 
-	public PayTable getPayTable(int marks);
+	public PayTable getPayTable(int marks) throws PayTableException;
 	
 	public Map<Integer, PayTable> getPayTableMap();
 	
