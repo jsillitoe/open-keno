@@ -12,8 +12,8 @@ Current Status
 --------------
 - *Standard Keno* - Complete
 - *Power Keno* - In progress
-..- The rules in Power Keno are the same as standard keno, except if the player catches the 20th ball drawn, then any winnings are quadrupled.
+..* The rules in Power Keno are the same as standard keno, except if the player catches the 20th ball drawn, then any winnings are quadrupled.
 - *Super Keno* - In progress
-..- The rules in Super Keno the same as standard keno, except if the player catches the 1st ball drawn, then any winnings are quadrupled.
+..* The rules in Super Keno the same as standard keno, except if the player catches the 1st ball drawn, then any winnings are quadrupled.
 - *Top-Bottom Keno* - Planning
-..- Top-bottom keno pays according to how many balls fall into a half (top or bottom) chosen by the player.
+..* Top-bottom keno pays according to how many balls fall into a half (top or bottom) chosen by the player.
