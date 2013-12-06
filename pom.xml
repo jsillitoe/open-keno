@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>jsillitoe-casino</groupId>
   <artifactId>open-keno</artifactId>
-  <version>0.0.1</version>
+  <version>0.1.0</version>
   <name>open-keno</name>
   
   <dependencies>

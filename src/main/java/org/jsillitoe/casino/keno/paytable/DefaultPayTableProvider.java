@@ -5,8 +5,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * TODO: Document me.
+ */
 public class DefaultPayTableProvider extends AbstractPayTableProvider {
 	
+	/**
+	 * TODO: Document me.
+	 */
 	public DefaultPayTableProvider() {
 		
 		List<Integer[]> pays = new ArrayList<Integer[]>();
@@ -31,6 +37,4 @@ public class DefaultPayTableProvider extends AbstractPayTableProvider {
 		
 	}
 
-	
-	
 }

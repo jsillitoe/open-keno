@@ -9,38 +9,35 @@ import org.jsillitoe.casino.keno.balls.Balls;
 import org.jsillitoe.casino.keno.paytable.PayTable;
 import org.jsillitoe.casino.keno.paytable.PayTableException;
 import org.jsillitoe.casino.keno.paytable.PayTableProvider;
+import org.jsillitoe.casino.keno.race.PowerRaceResult;
 import org.jsillitoe.casino.keno.race.RaceResult;
-import org.jsillitoe.casino.keno.race.StandardRaceResult;
 import org.jsillitoe.casino.keno.ticket.Ticket;
 
 /**
- * Keno is a simple game of luck where the player chooses numbers and 
- * hope as many as possible match those randomly drawn.
- * 
- * This class implements a standard keno game.
+ * TODO: Document me.
  */
-public class StandardKeno extends Keno {
+public class PowerKeno extends Keno {
 
 	/**
 	 * TODO: Document me.
 	 */
-	public StandardKeno() {
+	public PowerKeno() {
 		super();
+	}
+	
+
+	/**
+	 * TODO: Document me.
+	 */
+	public PowerKeno(BallProvider ballprovider,	PayTableProvider paytableprovider) {
+		super(ballprovider, paytableprovider);
 	}
 
 	
 	/**
 	 * TODO: Document me.
 	 */
-	public StandardKeno(BallProvider ballprovider, PayTableProvider paytableprovider) {
-		super(ballprovider, paytableprovider);
-	}
-
-
-	/**
-	 * TODO: Document me.
-	 */
-	public StandardKeno(BallProvider ballprovider) {
+	public PowerKeno(BallProvider ballprovider) {
 		super(ballprovider);
 	}
 
@@ -48,11 +45,11 @@ public class StandardKeno extends Keno {
 	/**
 	 * TODO: Document me.
 	 */
-	public StandardKeno(PayTableProvider paytableprovider) {
+	public PowerKeno(PayTableProvider paytableprovider) {
 		super(paytableprovider);
 	}
 
-
+	
 	/**
 	 * TODO: Document me.
 	 */
@@ -61,7 +58,7 @@ public class StandardKeno extends Keno {
 		try{
 			Balls balls = this.ballProvider.getBalls();
 			PayTable paytable = this.payTableProvider.getPayTable(ticket.countMarks());
-			return new StandardRaceResult(balls, ticket, paytable);
+			return new PowerRaceResult(balls, ticket, paytable);
 		}catch(BallProviderException bpe){
 			throw new KenoException(bpe);
 		}catch(PayTableException pte){
@@ -80,7 +77,7 @@ public class StandardKeno extends Keno {
 			Balls balls = this.ballProvider.getBalls();
 			for(Ticket ticket : tickets){
 				PayTable paytable = this.payTableProvider.getPayTable(ticket.countMarks());
-				results.add(new StandardRaceResult(balls, ticket, paytable));
+				results.add(new PowerRaceResult(balls, ticket, paytable));
 			}
 			return results;
 		}catch(BallProviderException bpe){

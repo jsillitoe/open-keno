@@ -19,11 +19,10 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class StandardKenoTest {
+public class PowerKenoTest {
 
 	private Keno keno;
 	private static BallProvider staticBallProvider;
-	
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -36,7 +35,6 @@ public class StandardKenoTest {
 				return new Balls(numbers);
 			}
 		};
-		
 	}
 
 	@AfterClass
@@ -45,12 +43,11 @@ public class StandardKenoTest {
 
 	@Before
 	public void setUp() throws Exception {
-		keno = new StandardKeno(staticBallProvider);
+		keno = new PowerKeno(staticBallProvider);
 	}
 
 	@After
 	public void tearDown() throws Exception {
-		keno = null;
 	}
 
 	@Test
@@ -72,4 +69,16 @@ public class StandardKenoTest {
 		assertEquals(3,result.getPayout());
 		
 	}
+	
+	
+	@Test
+	public void test_single_ticket_mark_1_hit_1_catch_lastball() throws KenoException, TicketException, PayTableException {
+		Ticket ticket = new DefaultTicket();
+		ticket.markNumber(20);
+		RaceResult result = keno.playTicket(ticket);
+		assertEquals(1,result.getBalls().getCaughtCount(result.getTicket()));
+		assertEquals(12,result.getPayout());
+		
+	}
+	
 }

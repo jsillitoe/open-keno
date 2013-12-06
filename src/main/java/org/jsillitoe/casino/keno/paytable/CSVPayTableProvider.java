@@ -9,9 +9,14 @@ import java.util.Map;
 
 import au.com.bytecode.opencsv.CSVReader;
 
+/**
+ * TODO: Document me.
+ */
 public class CSVPayTableProvider extends AbstractPayTableProvider{
 
-	
+	/**
+	 * TODO: Document me.
+	 */
 	public CSVPayTableProvider() throws IOException{
 		InputStream csvstream = CSVPayTableProvider.class.getResourceAsStream("paytable.csv");
 		CSVReader reader = new CSVReader(new InputStreamReader(csvstream));
@@ -27,5 +32,4 @@ public class CSVPayTableProvider extends AbstractPayTableProvider{
 		}
 	}
 
-	
 }

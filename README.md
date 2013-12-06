@@ -1,7 +1,7 @@
 open-keno
 =========
 
-Version 0.0.1
+Version 0.1.0
 
 Introduction
 ------------
@@ -50,6 +50,6 @@ For the standard keno game, instantiate the StandardKeno class and any tickets t
 Current Status
 --------------
 - *Standard Keno* - Complete
-- *Power Keno* - In progress
+- *Power Keno* - Complete
 - *Super Keno* - In progress
 - *Top-Bottom Keno* - Planning
